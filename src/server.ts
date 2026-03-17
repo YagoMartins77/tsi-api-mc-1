@@ -1,14 +1,14 @@
-import express from "express";
-import tarefasRoutes from "./routes/tarefas";
+import express from 'express';
+import filmeRoutes from './routes/filmes';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-app.use("/tarefas", tarefasRoutes);
+// Prefixando as rotas
+app.use('/filmes', filmeRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Servidor executando em localhost:${PORT}`);
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-
